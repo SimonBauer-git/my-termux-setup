@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Chromium Web Browser
+Comment=Access the Internet
+Exec=chromium --no-sandbox --ignore-gpu-blocklist --use-gl=desktop
+Icon=chromium
+Path=
+Terminal=false
+StartupNotify=true

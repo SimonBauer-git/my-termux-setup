@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=vscode
+Comment=
+Exec=code --no-sandbox --user-data-dir /home --ignore-gpu-blocklist --use-gl=virgl
+Icon=vscode
+Path=
+Terminal=false
+StartupNotify=false
