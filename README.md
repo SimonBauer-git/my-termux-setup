@@ -1,5 +1,5 @@
 # my-termux-setup
-How I setup my android tablet to work as a linux laptop. It can basically anything a laptop can do. limitations: no full usb support and programms need to be compiled for arm 64 (aarch64 to be exact). Performance is dependent on the device.
+How I setup my android tablet to work as a linux laptop. It can basically anything a laptop can do. limitations: no full usb support and programms need to be compiled for arm 64 (aarch64 to be exact). Performance is dependent on the device. the graphics part depends on the device you use, this is for devices with arm mali gpus (mostly Mediathek socs, and many other arm socs, but NOT Snapdragon ones), for adreno gpus (in Snapdragon socs) you need to use a different tutorial for the graphics part, which can be found online
 
 ## Apps you need:
 Termux is an application that gives you a linux shell on android, download termux via this link: https://github.com/termux/termux-app/releases
