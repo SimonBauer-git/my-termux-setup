@@ -32,3 +32,7 @@ before being able to use it you also need to follow this Tutorial for Sound (or 
 
 ## (optional, only if you need vscode)
 for the vscode install you want to grab the arm64.deb version from code.visualstudio.com then copy the vscode.desktop command from my github to be able to launch it, as you need to use a different command than normal as we use gpu acelleration and a root account. then use dpkg -i and then the file name to install vscode (terminal needs to be in the folder where vscode is downloaded from, either cd to it or launch terminal from the folder).
+## using it after install:
+to start open termux then simply type ./x11.sh this brings you into the proot distro. skip any errors that might show with the enter key, you can ignore them.
+
+to start your xfce session in proot distro then type in ./xfce.sh
