@@ -11,9 +11,24 @@ you need to disable phantom process killer. This is a service inside android tha
 
 ## installing the needed tools
 
-ok so you want to install termux x11 https://github.com/termux/termux-x11
-the normal termux app from f droid or from github (play store release isnt maintained and severely out of date)
-then in termux use pkg update.  then pkg install proot-distro then proot-distro install debian then pkg install x11-repo, then pkg install termux-x11-nightly. then install virglrenderer-android then log into proot-distro by typing proot-distro login debian then within proot-distro you do an apt update, then apt upgrade if its neccessary then apt install xfce4. you might also need to install libsecret so vscode keeps your login (assuming you want to sync with github/ms account for settings sync). after that go check the commands on my github. debian.sh and x11.sh go in the normal non proot-distro (just use wget and paste the url from the "view raw" section of the individual file or create the sh files yourself, they make it easier to launch the stuff as you dont need to be typing all of that crap thats in them Out every time you want to use vscode), xfce.sh goes into the proot distro. make these files executable with chmod +x and then the file name. do a termux-setup-storage aswell in termux as you want to have acess to the normal android file system too. this is the basic install of the proot-distro. before being able to use it you also need to follow this Tutorial for Sound (or edit x11.sh to not include the start audio Part, it is pretty clear what that one is in the command)
+first in termux use pkg update. 
+
+use pkg install proot-distro then proot-distro install debian to install proot distro in this case debian. 
+
+then use pkg install x11-repo, then pkg install termux-x11-nightly which installs the necessary tools for termux x11 to work.
+
+install virglrenderer-android for gpu acceleration, without it would work too but even something like vscode will run badly.
+
+log into proot-distro by typing proot-distro login debian
+
+within proot-distro you do an apt update, then apt upgrade if its neccessary then apt install xfce4. you might also need to install libsecret so vscode keeps your login (assuming you want to sync with github/ms account for settings sync). 
+
+the .sh files debian.sh and x11.sh go in the normal non proot-distro (just use wget and paste the url from the "view raw" section of the individual file or create the sh files yourself, they make it easier to launch the stuff as you dont need to be typing all of that crap thats in them Out every time you want to use vscode), xfce.sh goes into the proot distro. make these files executable with chmod +x and then the file name.
+
+use termux-setup-storage aswell in termux as you want to have acess to the normal android file system too. 
+this is the basic install of the proot-distro. 
+
+before being able to use it you also need to follow this Tutorial for Sound (or edit x11.sh to not include the start audio Part, it is pretty clear what that one is in the command)
 
 ## (optional, only if you need vscode)
 for the vscode install you want to grab the arm64.deb version from code.visualstudio.com then copy the vscode.desktop command from my github to be able to launch it, as you need to use a different command than normal as we use gpu acelleration and a root account. then use dpkg -i and then the file name to install vscode (terminal needs to be in the folder where vscode is downloaded from, either cd to it or launch terminal from the folder).
