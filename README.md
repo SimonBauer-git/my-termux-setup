@@ -1,5 +1,5 @@
 # my-termux-setup
-How I setup my android tablet to work as a linux laptop. It can basically anything a laptop can do. limitations: no full usb support and programms need to be compiled for arm 64 (aarch64 to be exact). Performance is dependent on the device. the graphics part depends on the device you use, this is for devices with arm mali gpus (mostly Mediathek socs, and many other arm socs, but NOT Snapdragon ones), for adreno gpus (in Snapdragon socs) you need to use a different tutorial for the graphics part, which can be found online. Disclaimer: doing the wrong things in it can and will crash your gpu driver, which will crash android, that can be resolved by a forced reboot of the device. if you brick your device by using this tutorial thats on you.
+How I setup my android tablet to work as a linux laptop. It can basically anything a laptop can do. limitations: no full usb support and programms need to be compiled for arm 64 (aarch64 to be exact). Performance is dependent on the device. the graphics part depends on the device you use, this is for devices with arm mali gpus (mostly Mediathek socs, and many other arm socs, but NOT Snapdragon ones), for adreno gpus (in Snapdragon socs) you can use a different tutorial for the graphics part, virglrenderer will also work on these but turnip/zink (the other way) is faster, which can be found online. Disclaimer: doing the wrong things in it can and will crash your gpu driver, which will crash android, that can be resolved by a forced reboot of the device. if you brick your device by using this tutorial thats on you.
 
 ## Apps you need:
 Termux is an application that gives you a linux shell on android, download termux via this link: https://github.com/termux/termux-app/releases
@@ -29,6 +29,11 @@ use termux-setup-storage aswell in termux as you want to have acess to the norma
 this is the basic install of the proot-distro. 
 
 before being able to use it you also need to follow this Tutorial for Sound (or edit x11.sh to not include the start audio Part, it is pretty clear what that one is in the command)
+https://docs.andronix.app/troubleshoot/sound
+or follow this:
+in termux run these commands
+pkg install wget && wget https://andronixos.sfo2.cdn.digitaloceanspaces.com/OS-Files/setup-audio.sh && chmod +x
+setup-audio.sh && ./setup-audio.sh
 
 ## (optional, only if you need vscode)
 for the vscode install you want to grab the arm64.deb version from code.visualstudio.com then copy the vscode.desktop command from my github to be able to launch it, as you need to use a different command than normal as we use gpu acelleration and a root account. then use dpkg -i and then the file name to install vscode (terminal needs to be in the folder where vscode is downloaded from, either cd to it or launch terminal from the folder).
