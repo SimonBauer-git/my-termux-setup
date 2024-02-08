@@ -17,7 +17,7 @@ use pkg install proot-distro then proot-distro install debian to install proot d
 
 then use pkg install x11-repo, then pkg install termux-x11-nightly which installs the necessary tools for termux x11 to work.
 
-install virglrenderer-android for gpu acceleration, without it would work too but even something like vscode will run badly.
+install angle-android and virglrenderer-android for gpu acceleration, without it would work too but even something like vscode will run badly.
 
 log into proot-distro by typing proot-distro login debian
 
